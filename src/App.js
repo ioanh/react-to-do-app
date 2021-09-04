@@ -17,18 +17,15 @@ function App() {
   }
 
   function clearComplete(){
-    setTodo(prevState => {
-      return prevState.filter(todo => todo.complete === false)
-    })
+    const newTodos = todos.filter(todo => !todo.complete)
+    setTodo(newTodos)
   }
 
   function toggleToDo(id){
     const newTodos = [...todos]
     const todo = newTodos.find(el => el.id === id)
     todo.complete = !todo.complete
-    setTodo(prevState => {
-      return newTodos
-    })
+    setTodo(newTodos)
   }
 
   return (
