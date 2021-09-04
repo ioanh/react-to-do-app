@@ -22,9 +22,18 @@ function App() {
     })
   }
 
+  function toggleToDo(id){
+    const newTodos = [...todos]
+    const todo = newTodos.find(el => el.id === id)
+    todo.complete = !todo.complete
+    setTodo(prevState => {
+      return newTodos
+    })
+  }
+
   return (
     <>
-    <ToDoList todos = {todos}/>
+    <ToDoList todos = {todos} toggleToDo={toggleToDo}/>
     <input ref={toDoNameRef} type="text"></input>
     <button onClick={addToDo}>Add Todo</button>
     <button onClick={clearComplete}>Clear Complete</button>
