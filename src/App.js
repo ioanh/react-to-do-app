@@ -4,7 +4,7 @@ import ToDoList from './ToDoList'
 import React, {useState, useRef} from 'react';
 
 function App() {
-  const [todos, setTodo] = useState([{id: 1, name: 'Todo 1', complete: true}])
+  const [todos, setTodo] = useState([{id: 1, name: 'Todo 1', complete: false}])
   const toDoNameRef = useRef();
 
   function addToDo(){
