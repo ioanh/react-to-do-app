@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
 export default class ToDo extends Component {
-    uncheck(id){
+    onUncheck(id){
         console.log(id)
     }
     render() {
         return (
             <div>
                 {this.props.todo.name}
-                <input type="checkbox" checked={this.props.todo.complete}></input>
-                <button onClick={uncheck(this.props.todo.id)}>Console log the id of the current element</button>
+                <input type="checkbox" defaultChecked={this.props.todo.complete}></input>
+                <button onClick={this.onUncheck(this.props.todo.id)}>Console log the id of the current element</button>
             </div>
         )
     }
