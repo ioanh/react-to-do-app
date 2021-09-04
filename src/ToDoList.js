@@ -5,7 +5,7 @@ export default class ToDoList extends Component {
     render() {
         return (
             this.props.todos.map(todo => {
-                return <ToDo key={todo} todo = {todo}/>
+                return <ToDo key={todo.id} todo = {todo}/>
             })
         )
     }
