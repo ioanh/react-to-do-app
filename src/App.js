@@ -8,7 +8,12 @@ function App() {
   const toDoNameRef = useRef();
 
   function addToDo(){
-    console.log(toDoNameRef.current.value)
+    const name = toDoNameRef.current.value
+    // todos.push({id: todos.length + 1, name: toDoNameRef.current.value, complete: false})
+    setTodo(prevState => {
+     return [...prevState, {id: prevState.length + 1, name: name, complete: false}] 
+    })
+    toDoNameRef.current.value = null
   }
 
   return (
