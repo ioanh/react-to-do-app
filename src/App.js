@@ -8,6 +8,10 @@ function App() {
   return (
     <>
     <ToDoList todos = {todos}/>
+    <input type="text"></input>
+    <button>Add Todo</button>
+    <button>Clear Complete</button>
+    <p>0 Todos Left</p>
     </>
   );
 }
